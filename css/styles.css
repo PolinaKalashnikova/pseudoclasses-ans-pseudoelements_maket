@@ -21,9 +21,13 @@
     font-size: 0;
 }
 
+.header .container {
+    display: grid;
+    grid-template-columns: 60px 1fr 28px;
+    align-items: center;
+}
+
 .header-logo {
-    display: inline-block;
-    vertical-align: middle;
     width: 60px;
     height: 60px;
 }
@@ -33,9 +37,7 @@
 }
 
 .menu {
-    margin-left: 187px;
-    display: inline-block;
-    vertical-align: middle;
+    justify-self: center;
 }
 
 .menu ul {
@@ -63,26 +65,26 @@
 }
 
 .header-search {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 137px;
+
 }
 
 .main {
     padding: 50px 0 45px 0;
 }
 
-.main-info {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 552px;
-    font-family: Arial, sans-serif;
+.main .container {
+    display: grid;
+    grid-column-gap: 51px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .main-image {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 51px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 5;
+}
+
+.main-image img {
+    max-width: 100%;
 }
 
 .main h1 {
@@ -184,15 +186,20 @@
 }
 
 .films-items {
-    font-size: 0;
-    margin-left: -12px;
-    margin-right: -12px;
-}
+    display: grid;
+    gap: 20px 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 384px));
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: center;
+ }
 
 .films-item {
-    margin: 10px 12px 10px 12px;
-    display: inline-block;
-    vertical-align: middle;
+
+}
+
+.films-item img {
+    max-width: 100%;
 }
 
 .films-item:hover {
@@ -215,7 +222,7 @@
     color: #BDBDBD;
 }
 
-.films-more:hover .show-more{
+.films-more:hover .show-more {
     color: #1F1F1F;
 }
 
@@ -226,4 +233,8 @@
 
 .header-search:hover {
     opacity: 0.5;
+}
+
+.burger {
+    display: none;
 }
